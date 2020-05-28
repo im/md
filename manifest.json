@@ -1,10 +1,10 @@
 {
     "name": "markdown",
     "short_name": "markdown",
-    "start_url": "/md/js/index.html",
+    "start_url": "/md/index.html",
     "display": "standalone",
     "background_color": "#fff",
-    "theme_color": "#3eaf7c",
+    "theme_color": "#fff",
     "icons": [
         {
             "src": "https://i.loli.net/2020/05/28/zfdaI6NHrXOWvwu.png",
