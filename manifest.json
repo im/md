@@ -1,7 +1,7 @@
 {
   "name": "markdown",
   "short_name": "markdown",
-  "start_url": "/index.html",
+  "start_url": "https://cdn.jsdelivr.net/gh/im/md@master/index.html",
   "display": "standalone",
   "background_color": "#fff",
   "theme_color": "#3eaf7c",
