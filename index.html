@@ -83,13 +83,7 @@
     </head>
   </head>
   <body>
-    <markdown-deck hotkey="" hashsync=""></markdown-deck>
+    <markdown-deck src="demo.md" hotkey="" hashsync=""></markdown-deck>
   </body>
-  <script>
-    console.info("Built with eloc-cli (v1.3.0)");
-    const deck = document.querySelector("markdown-deck");
-    deck.src =
-      new URL(document.location).searchParams.get("src") || "deck.md";
-  </script>
   <script src="markdown-deck.min.js"></script>
 </html>
