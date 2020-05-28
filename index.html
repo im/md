@@ -104,7 +104,7 @@
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', function () {
                 navigator.serviceWorker
-                    .register('/md/js/sw.js', { scope: '/md' })
+                    .register('/md/sw.js', { scope: '/md/js' })
                     .then(function (registration) {
                         // 注册成功
                         console.log('ServiceWorker registration successful')
