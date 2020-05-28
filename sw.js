@@ -1,7 +1,7 @@
 //缓存空间名称
 var CACHE_VERSION = 'sw_v1'
 //需缓存的文件
-var CACHE_FILES = [ 'index.html']
+var CACHE_FILES = [ '/md/index.html', '/md/markdown-deck.min.js']
 
 //监听安装事件
 self.addEventListener('install', function (event) {

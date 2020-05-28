@@ -1,7 +1,7 @@
 {
     "name": "markdown",
     "short_name": "markdown",
-    "start_url": "/",
+    "start_url": "/md/",
     "display": "standalone",
     "background_color": "#fff",
     "theme_color": "#3eaf7c",
