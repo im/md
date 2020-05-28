@@ -1,0 +1,15 @@
+{
+  "name": "markdown",
+  "short_name": "markdown",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#3eaf7c",
+  "icons": [
+    {
+      "src": "https://cdn.jsdelivr.net/gh/im/oss@master/notes/images/2020/05/28/icon-markdown%20%281%29.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    }
+  ]
+}
