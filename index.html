@@ -1,11 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    11
-</body>
+  <head>
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <title>md</title>
+      <style>
+        html,
+        body {
+          height: 100%;
+          margin: 0;
+        }
+
+        .toast {
+          background-color: #444;
+          color: #fff;
+          text-align: left;
+          white-space: nowrap;
+        }
+        .toast {
+          font: 16px/30px sans-serif;
+          min-width: 300px;
+          padding: 5px 1em;
+          border-radius: 6px;
+        }
+        .toast {
+          position: fixed;
+          left: 10px;
+          animation: toast 2s;
+        }
+        .toast.success {
+          background-color: #3b6;
+        }
+        .toast.error {
+          background-color: #e54;
+        }
+
+        @keyframes toast {
+          from {
+            bottom: -10px;
+            opacity: 0;
+          }
+          10% {
+            bottom: 10px;
+            opacity: 1;
+          }
+          90% {
+            bottom: 10px;
+            opacity: 1;
+          }
+          to {
+            bottom: -10px;
+            opacity: 0;
+          }
+        }
+      </style>
+      <link
+        href="https://rsms.me/inter/inter.css"
+        rel="stylesheet"
+        type="text/css"
+        crossorigin="anonymous"
+      />
+      <link
+        href="https://fonts.googleapis.com/css?family=Roboto:400,400i,900&amp;display=swap"
+        rel="stylesheet"
+        type="text/css"
+        crossorigin="anonymous"
+      />
+      <link
+        href="https://fonts.googleapis.com/css?family=Merriweather:400,400i&amp;display=swap"
+        rel="stylesheet"
+        type="text/css"
+        crossorigin="anonymous"
+      />
+      <link
+        href="https://fonts.googleapis.com/css?family=Fira+Code:400,400i,700&amp;display=swap"
+        rel="stylesheet"
+        type="text/css"
+        crossorigin="anonymous"
+      />
+    </head>
+  </head>
+  <body>
+    <markdown-deck hotkey="" hashsync=""></markdown-deck>
+  </body>
+  <script>
+    console.info("Built with eloc-cli (v1.3.0)");
+    const deck = document.querySelector("markdown-deck");
+    deck.src =
+      new URL(document.location).searchParams.get("src") || "deck.md";
+  </script>
+  <script src="markdown-deck.min.js"></script>
 </html>
