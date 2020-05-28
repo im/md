@@ -4,7 +4,7 @@
     "start_url": "/md/index.html",
     "display": "standalone",
     "background_color": "#fff",
-    "theme_color": "#fff",
+    "theme_color": "#ff7564",
     "icons": [
         {
             "src": "https://i.loli.net/2020/05/28/zfdaI6NHrXOWvwu.png",
