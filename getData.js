@@ -22,7 +22,7 @@ const login = () => {
         })
         .then(function (data) {
             if (data.statusCode === 200) {
-                window.location.reload()
+                // window.location.reload()
             }
         })
 }
