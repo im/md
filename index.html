@@ -9,11 +9,12 @@
             />
             <meta http-equiv="X-UA-Compatible" content="ie=edge" />
             <title>Markdown</title>
-            <link
-                rel="shortcut icon"
-                href="https://cdn.jsdelivr.net/gh/im/oss@master/notes/images/2020/05/28/icon-markdown.png"
-                type="image/x-icon"
-            />
+            <!-- <script
+                type="module"
+                src="https://unpkg.com/markdown-deck"
+            ></script> -->
+            <script src="markdown-deck.min.js"></script>
+
             <style>
                 html,
                 body {
@@ -21,34 +22,18 @@
                     margin: 0;
                 }
             </style>
-            <link rel="manifest" href="manifest.json" />
         </head>
     </head>
-    <body>
+    <body onhashchange="hashChange">
         <markdown-deck
-            src="https://cdn.jsdelivr.net/gh/im/md@master/default.md"
+            id="markdown-deck"
             hotkey
             hashsync
+            index="4"
             progressbar
             editor
-        >
-        </markdown-deck>
+            markdown="## Loading ..."
+        />
     </body>
-    <script src="markdown-deck.min.js"></script>
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function () {
-                navigator.serviceWorker
-                    .register('/sw.js', { scope: '/md/' })
-                    .then(function (registration) {
-                        // 注册成功
-                        console.log('ServiceWorker registration successful')
-                    })
-                    .catch(function (err) {
-                        // 注册失败:(
-                        console.log('ServiceWorker registration failed')
-                    })
-            })
-        }
-    </script>
+    <script type="text/javascript" src="./getData.js"></script>
 </html>
