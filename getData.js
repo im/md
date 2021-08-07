@@ -22,7 +22,7 @@ const login = () => {
         })
         .then(function (data) {
             if (data.statusCode === 200) {
-                // window.location.reload()
+                queryAllStared()
             }
         })
 }
@@ -45,7 +45,7 @@ const format = () => {
     wordList.forEach((item, index) => {
         str += '---\n'
         str += `## ${item.word}\n`
-        str += `##### /${item.uspron}/\n`
+        str += `##### /${item.ukpron}/\n`
         // str += `##### /${item.ukpron}/\n`
         item.interpret.split(/\r?\n/).forEach((i) => {
             str += `* ${i} \n`
@@ -71,16 +71,24 @@ fetch(`${host}/userInfo`, {
         if (body) {
             if (body.type === '0') {
                 login()
+            } else {
+                queryAllStared()
             }
         }
     })
-
-queryAllStared()
-
-window.onhashchange = function (event) {
-    console.log(event)
+const play = (index) => {
+    const { word } = wordList[index]
+    const url = `https://audio2.beingfine.cn/speeches/UK/UK-speech/${word}.mp3`
+    const mp3 = new Audio(url)
+    mp3.play()
 }
-//或者
-window.addEventListener('hashchange', function (event) {
-    console.log(event)
-})
+
+window.historyChange = (index) => {
+    play(index)
+    if (wordList.length - 1 === index) {
+        if (!loading) {
+            page++
+            queryAllStared()
+        }
+    }
+}
