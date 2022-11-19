@@ -1,39 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <head>
-            <meta charset="UTF-8" />
-            <meta
-                name="viewport"
-                content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
-            />
-            <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-            <title>Markdown</title>
-            <link
-                rel="shortcut icon"
-                href="https://cdn.jsdelivr.net/gh/im/oss@master/notes/images/2020/05/28/icon-markdown.png"
-                type="image/x-icon"
-            />
-            <script src="markdown-deck.min.js"></script>
 
-            <style>
-                html,
-                body {
-                    height: 100%;
-                    margin: 0;
-                }
-            </style>
-        </head>
+<head>
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Markdown</title>
+        <link rel="icon" href="favicon.ico" />
+        <script src="markdown-deck.min.js"></script>
+        <style>
+            html,
+            body,
+            #slides {
+                height: 100%;
+                margin: 0
+            }
+        </style>
     </head>
-    <body>
-        <markdown-deck
-            id="markdown-deck"
-            hotkey
-            hashsync
-            progressbar
-            editor
-            markdown="## Loading ..."
-        />
-    </body>
-    <script type="text/javascript" src="./getData.js"></script>
+</head>
+
+<body>
+
+    <markdown-deck id="slides" src="demo.md" hashsync hotkey editor progressBar></markdown-deck>
+</body>
+
 </html>
